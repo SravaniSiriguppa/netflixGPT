@@ -6,3 +6,5 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {accept: 'application/json', Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhOWQwNjdjZThiOWNmMDU2N2RiNWJiNGYzMDEyMWZmOCIsIm5iZiI6MTc4NDcwMjA0Ny4xMTgsInN1YiI6IjZhNjA2NDVmMjljMTQ4MjgzNGY0OGM5NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.vrFdGYYXpeDekZZMVLbxqrz3Kv7R1NME4rlTLblYHZg'},
 };
+
+export const MOVIE_IMAGE_URL="https://image.tmdb.org/t/p/w300/"
