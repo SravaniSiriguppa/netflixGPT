@@ -24,7 +24,7 @@ const MainContainer = () => {
     const { title, overview, id } = mainMovie;
 
     return (
-        <div className="relative w-full aspect-video py-36 pt-[120px] px-10 pb-[20px]">
+        <div className="relative w-full aspect-video py-36 pt-[120px] px-10 pb-[20px] bg-black/90">
             <VideoTitle title={title} overview={overview} />
             <VideoBackground movieId={id} />
         </div>

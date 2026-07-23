@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../utils/userSlice";
 import { APP_LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
-import { setGptToggling } from "../utils/gptSlice";
+import { setGptToggling, clearGPTMovieCards } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
 
 const Header = () => {
@@ -25,7 +25,6 @@ const Header = () => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
-            // console.log("Header user: ", user);
             if (user) {
                 // User is signed up or signed in
                 const { uid, email, displayName, photoURL } = user;
@@ -50,10 +49,10 @@ const Header = () => {
 
      const handleNetflixGPT = () => {
         dispatch(setGptToggling());
+        dispatch(clearGPTMovieCards());
     }
 
     const handleLanguageChange = (e) => {
-        console.log(e.target.value);
         dispatch(changeLanguage(e.target.value));
     }
 
@@ -69,7 +68,6 @@ const Header = () => {
                     <button className="text-white bg-gray-700 bg-opacity-30 cursor-pointer w-18 px-4 rounded-md h-8"
                         onClick={() => handleNetflixGPT()}> 
                         {!showGptSearch ? "Netflix GPT" : "Home"} 
-                        {/* Netflix GPT */}
                         </button>
                     <img
                         className="w-16 h-16 p-2"

@@ -23,7 +23,6 @@ const Login = () => {
     const password = useRef(null);
 
     const handleFormBtn = () => {
-        // console.log(email.current.value, password)
         const message = checkValidData(
             name.current?.value || "",
             email.current.value,
@@ -82,7 +81,6 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in
                     const user = userCredential.user;
-                    // console.log(user);
                 })
                 .catch((error) => {
                     const errorCode = error.code;

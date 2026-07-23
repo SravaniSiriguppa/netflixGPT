@@ -39,6 +39,11 @@
     - GPT Search Page
     - GPT Search Bar
     - GPT Search page - Munti-lingual feature
+    - Fetched the data from the openai API based on the text from our netflixGPT searchbar
+    - Added the gptMovies data to our redux store
+    - Fetched the tmdbData for these gptMovies and stored that in redux srtore
+    - Made cards by reusing MovieLists componets, by using gptMovies as title and tmdbMovies as cards
+    - Handled the NetflixGPT page to clear out all the cards ince mover browsers from netfliGPT -> Search (fills the cards) -> HomePage -> Search -> netflixGPT (this usually contains cards but as this is new search, we are removing the cards from here by using gptSlice actions)
 
 # Features
     - Login / Sign Up

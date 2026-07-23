@@ -8,7 +8,7 @@ const useMovieTrailer = (movieId) => {
     const dispatch = useDispatch();
     // const trailer = useSelector((store) => store.movies?.trailer);
 
-    // Fetch trailer video 
+    // Fetch trailer video
     const getMovieVideos = async () => {
         const data = await fetch(
             "https://api.themoviedb.org/3/movie/" +
@@ -17,14 +17,17 @@ const useMovieTrailer = (movieId) => {
             API_OPTIONS,
         );
         const json = await data.json();
-        // console.log("video: ", json);
+
+        if (!json.results) {
+
+            return;
+        }
 
         const trailers = json.results.filter(
             (video) => video.type === "Trailer",
         );
         const trailer = trailers.length > 0 ? trailers[0] : json.results[0];
         // setMovieTrailerKey(movieTrailer?.key)
-        // console.log("trailer:", trailer);
         dispatch(addMovieTrailer(trailer));
     };
 

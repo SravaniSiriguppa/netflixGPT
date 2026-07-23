@@ -16,7 +16,8 @@ const Browse = () => {
     useUpcomingMovies();
 
     return (
-        <div className="bg-black/90">
+        <div className="">
+            {/* bg-black/90 */}
             <Header />
             {selector ? (
                 <GptSearchPage />
