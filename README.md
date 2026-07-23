@@ -36,6 +36,9 @@
     - TMDB Image CDN URL
     - Made the UI better
     - created customHooks for popular, upcoming and toprated lists
+    - GPT Search Page
+    - GPT Search Bar
+    - GPT Search page - Munti-lingual feature
 
 # Features
     - Login / Sign Up

@@ -8,3 +8,5 @@ export const API_OPTIONS = {
 };
 
 export const MOVIE_IMAGE_URL="https://image.tmdb.org/t/p/w300/"
+
+export const SUPPORTED_LANGUAGES = [{identifier: "en" , value:"English"},{identifier: "hindi" , value:"Hindi"},{identifier: "spanish" , value:"Spanish"}]
