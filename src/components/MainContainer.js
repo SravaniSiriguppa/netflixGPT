@@ -25,8 +25,17 @@ const MainContainer = () => {
 
     return (
         <div className="relative w-full aspect-video py-36 pt-[120px] px-10 pb-[20px] bg-black/90">
-            <VideoTitle title={title} overview={overview} />
-            <VideoBackground movieId={id} />
+            {/* Video */}
+
+            <div className="relative rounded-2xl overflow-hidden">
+                <VideoBackground movieId={id} />
+
+                {/* Overlay Title */}
+
+                <div className="absolute inset-0">
+                    <VideoTitle title={title} overview={overview} />
+                </div>
+            </div>
         </div>
     );
 };

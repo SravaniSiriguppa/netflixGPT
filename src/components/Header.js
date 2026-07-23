@@ -57,15 +57,15 @@ const Header = () => {
     }
 
     return (
-        <div className="absolute w-screen top-0 left-0 right-0 z-10 flex justify-between items-center px-[40px] py-4 bg-gradient-to-b from-black">
-            <img className="m-2 w-40" src={APP_LOGO} alt="logo" />
+        <div className="absolute w-screen top-0 left-0 right-0 z-10 flex flex-col md:flex-row justify-between items-center px-[40px] py-4 bg-gradient-to-b from-black">
+            <img className="m-2 w-40 mx-auto md:mx-0" src={APP_LOGO} alt="logo" />
             <div className="flex items-center">
                 {user && ( <>
                     {/* (config.lang!='en') && */}
-                    {showGptSearch && (<select className="text-white px-4 rounded-md h-8 bg-gray-700 bg-opacity-30 mx-2" onChange={handleLanguageChange}>
+                    {showGptSearch && (<select className="text-white px-4 rounded-md h-8 bg-gray-700 bg-opacity-70 mx-2" onChange={handleLanguageChange}>
                         {SUPPORTED_LANGUAGES.map((SUPPORTED_LANGUAGE) => <option className=" bg-gray-700 bg-opacity-30" key={SUPPORTED_LANGUAGE.identifier} value={SUPPORTED_LANGUAGE.identifier}>{SUPPORTED_LANGUAGE.value}</option>)}
                     </select>) }
-                    <button className="text-white bg-gray-700 bg-opacity-30 cursor-pointer w-18 px-4 rounded-md h-8"
+                    <button className="text-white bg-gray-700 bg-opacity-70 cursor-pointer w-18 px-4 rounded-md h-8"
                         onClick={() => handleNetflixGPT()}> 
                         {!showGptSearch ? "Netflix GPT" : "Home"} 
                         </button>

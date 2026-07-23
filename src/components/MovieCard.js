@@ -1,7 +1,7 @@
 import { MOVIE_IMAGE_URL } from "../utils/constants";
 
 const MovieCard = ({ PosterPath }) => {
-    if(!PosterPath) return null;
+    if (!PosterPath) return null;
     return (
         // <div className="relative w-40 flex-shrink-0 p-2 group">
         //     <img

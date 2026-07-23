@@ -11,7 +11,7 @@ const GptSearchPage = () => {
                 alt=""
             />
             <GptSearchBar />
-            <div className="p-2 m-2 text-white bg-black bg-opacity-90 rounded-2xl w-[1440px] h-[1720px]">
+            <div className="p-2 m-2 text-white bg-black bg-opacity-90 rounded-2xl w-[500px] md:w-[1440px] h-[1720px]">
                 <GptMovieSuggestions />
             </div>
         </div>
