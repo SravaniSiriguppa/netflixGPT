@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { API_OPTIONS } from "../utils/constants";
 import { addNowPlayingMovies } from "../utils/movieSlice";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 const useNowPlayingMovies = () => {
     // fetched TMDB movies data and adds it to the store
